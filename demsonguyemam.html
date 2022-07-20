@@ -3,19 +3,41 @@
 
 <head>
     <meta charset=utf-8 />
-    <title>Đảo số</title>
+    <title>JS Bin</title>
     <style>
         body {padding-top:50px}
      </style>
 </head>
 
 <body>
-   
-
-<script>
-   let arr = <input type="number" >Nhập n số</input>;
-
-</script>
+    <input type="number" id="txtValue"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <input type="button" id="btnDisplay" value="Change" onclick="Change_array();"/>
+    <td><div id="result">Phần tử</div></td>
+    <td><div id="result2">kết quả số âm</div></td>
 </body>
-
+<script>
+    let x = 0;
+let array = Array();
+function display_array() {
+    array[x] = document.getElementById("txtValue").value;
+    x++;
+    let e = "<hr/>";
+    for (let i = 0; i < array.length; i++) {
+        e +=array[i];
+    }
+    document.getElementById("result").innerHTML = e;
+    }
+    let arram = Array();
+function Change_array(){    
+     arram[x] = document.getElementById("txtValue").value;
+     x++;
+     let b = "<hr/>";
+    for( let i=0; i< arram.length; i++){
+        if(arram[i] < 0)
+        b += arram[i];
+        document.getElementById("result2").innerHTML = b;
+    }
+}
+</script>
 </html>
